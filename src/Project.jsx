@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaHandPointRight } from "react-icons/fa";
 import { FaSection } from "react-icons/fa6";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -17,8 +17,14 @@ const Project = () => {
           icon={fa}
         >
           <h3 className="vertical-timeline-element-title font-medium">Website Name: Lifeline (Team Project)</h3>
-          <a href="https://hospital-management-4e9fc.web.app" className="font-medium">Live Site of Project Link</a> <br />
+          <div className="flex space-x-2 items-center">
+            <FaHandPointRight></FaHandPointRight>
+          <a href="https://hospital-management-4e9fc.web.app" className="font-medium">Live Site of Project</a> <br />
+          </div>
+          <div className="flex space-x-2 items-center">
+          <FaHandPointRight></FaHandPointRight>
           <a className="my-2 font-medium" href="https://github.com/md-nahiduzzaman/lifeline">Repository Link</a> <br />
+          </div>
           
           <p>
           Creative Design, Responsive, and Interactive
@@ -38,8 +44,15 @@ const Project = () => {
           icon={fa}
         >
           <h3 className="vertical-timeline-element-title">Website Name:Catro-Forum</h3>
-          <a href="https://cat-website-c0880.web.app">Live Site:https://cat-website-c0880.web.app</a> <br />
-          <a className="my-2" href="https://github.com/robs360/catro-forum">Front-end repo:https://github.com/robs360/catro-forum</a> <br />
+          <div className="flex space-x-2 items-center">
+          <FaHandPointRight></FaHandPointRight>
+          <a className="font-medium" href="https://cat-website-c0880.web.app">Live Site Of Project</a> <br />
+          </div>
+          <div className="flex space-x-2 items-center">
+          <FaHandPointRight></FaHandPointRight>
+          <a className="my-2 font-medium" href="https://github.com/robs360/catro-forum">Front-end Repository</a> <br />
+          </div>
+          <a className="my-2 font-medium" href="https://github.com/robs360/catro-forum">Front-end Repository</a> 
           <a href="https://github.com/robs360/Catro-forum-server">Back-end repo:https://github.com/robs360/Catro-forum-server</a> <br />
           <p>
             Creative Design,Responsive and interactive. It's a Pet adopting site like,
