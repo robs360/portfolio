@@ -6,8 +6,8 @@ function App() {
  
   // https://portfolio-a6968.web.app
   return (
-     <div>
-      <Nav></Nav>
+     <div className=''>
+      <Nav className='hidden'></Nav>
         <Outlet></Outlet>
      </div>
   )
