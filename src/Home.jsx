@@ -19,6 +19,7 @@ import project3 from './assets/images/project_image3.png'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import tailwind from './assets/images/tailwind2.svg'
+import { Link } from 'react-router-dom';
 AOS.init();
 const Home = () => {
     const fa1 = <FaReact className='text-cyan-300'></FaReact>
@@ -175,7 +176,7 @@ const Home = () => {
 
 
                         <button className="absolute h-[40px] bg-cyan-300 font-medium p-2 rounded-md opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            Show Details
+                        <Link to={'/project/1'}>Show Details</Link>
                         </button>
                         <p className='mt-2 text-white font-medium'>Project Name: LifeLine (Team Project)</p>
                     </div>
@@ -193,7 +194,7 @@ const Home = () => {
 
 
                         <button className="absolute h-[40px] bg-cyan-300 font-medium p-2 rounded-md opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            Show Details
+                            <Link to={'/project/2'}>Show Details</Link>
                         </button>
 
                         <p className='font-medium text-white mt-2'>Project Name: CatroForum</p>
@@ -212,7 +213,7 @@ const Home = () => {
 
 
                         <button className="absolute h-[40px] bg-cyan-300 font-medium p-2 rounded-md opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            Show Details
+                        <Link to={'/project/3'}>Show Details</Link>
                         </button>
                         <p className='mt-2 text-white font-medium'>Project Name: Job Hunting</p>
                     </div>

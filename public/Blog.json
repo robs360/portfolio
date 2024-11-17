@@ -1,5 +1,6 @@
 [
     {
+        "id":"1",
         "name": "LifeLine (Team Project)",
         "image": "https://i.ibb.co/M8wv8Pw/project-image3.png",
         "liveLink": "https://hospital-management-4e9fc.web.app",
@@ -7,6 +8,7 @@
         "description":"LifeLine is a collaborative team project focused on hospital management, offering a seamless and user-friendly experience for various stakeholders. The platform allows users to book doctor appointments effortlessly, engage in video consultations with doctors, and communicate directly with the admin to resolve queries. For administrators, LifeLine provides robust features such as managing doctors effectively, including adding and updating profiles, allocating beds and monitoring their status, and handling payment processing for doctors with access to detailed payment history.Additionally, the platform includes a beautiful category-wise navigation bar that enhances the user experience by making it easy to navigate through various features and sections. The intuitive design ensures a smooth and visually appealing interface.The project was developed using React with TypeScript for the front end and MongoDB for the backend, ensuring a modern, efficient, and scalable solution."
     },
     {
+        "id":"2",
         "name": "CatroForum",
         "image": "https://i.ibb.co/bdjJQGW/project-image2.png",
         "liveLink": "https://cat-website-c0880.web.app",
@@ -15,6 +17,7 @@
         "description":"Catroforum is a responsive and user-friendly website dedicated to raising awareness about pets and their well-being. This platform allows users to donate to support pets in need, adopt pets, and explore detailed information about various pets. The website also categorizes pets for easier navigation, making it simple for users to find their desired pet based on type or category.For administrators, Catroforum offers essential features such as the ability to manage users (e.g., deleting user accounts), update the status of pets (e.g., marking a pet as adopted or available for adoption), and sell pets directly through the platform.The payment system is seamlessly integrated using Stripe, ensuring secure and efficient transactions. The project was built with React for the front end, MongoDB for the backend, and JavaScript to provide a modern, robust, and scalable solution."
     },
     {
+        "id":"3",
         "name": "Job Hunting",
         "image": "https://i.ibb.co/fQk1vMy/project-image1.png",
         "liveLink": "https://job-hunter-3fec4.web.app",
