@@ -19,7 +19,7 @@ const Project = () => {
     <div className="mt-3 py-9 min-h-[100vh]">
       {
         info?.map(arr => {
-          // Ensure projectId and arr.id are of the same type
+          
           if (arr.id.toString() === projectId) {
             return (
               <div className="mt-4 text-white flex w-full md:w-[96%] mx-auto gap-6
@@ -54,7 +54,7 @@ const Project = () => {
               </div>
             )
           }
-          return null; // If condition is not met, return null (nothing to render)
+          return null; 
         })
       }
     </div>
