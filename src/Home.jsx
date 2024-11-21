@@ -68,6 +68,16 @@ const Home = () => {
              text-center mt-6 md:mt-14 mb-6'>
                     My Favourite Language and Framework</h1>
                 <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 w-[90%] mx-auto p-2 py-4'>
+                <div className='w-[295px] mx-auto h-[200px] p-[6px]
+                 bg-white shadow-xl rounded-md'>
+                        <img src={react} className='w-[48px] h-[45px] mx-auto my-2' alt="" srcset="" />
+                        <p className='text-center font-medium text-[15px]'> I have start react
+                            only 6 month ago.But it have place in my favourite js library.
+                            i was done 4 project with react.With React design made very easy for me
+                            But i have gain more knowledge of react
+                        </p>
+                    </div>
+                    
                     <div className='w-[300px] mx-auto h-[200px] p-[6px]
                  bg-white shadow-xl rounded-md'>
                         <img src={ts} className='w-[48px] h-[45px] mx-auto my-2' alt="" srcset="" />
@@ -84,15 +94,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className='w-[295px] mx-auto h-[200px] p-[6px]
-                 bg-white shadow-xl rounded-md'>
-                        <img src={react} className='w-[48px] h-[45px] mx-auto my-2' alt="" srcset="" />
-                        <p className='text-center font-medium text-[15px]'> I have start react
-                            only 6 month ago.But it have place in my favourite js library.
-                            i was done 4 project with react.With React design made very easy for me
-                            But i have gain more knowledge of react
-                        </p>
-                    </div>
+                   
                 </div>
             </div>
             <h1 className='text-4xl font-medium text-center my-20 text-white'>About Me And My Skills</h1>
