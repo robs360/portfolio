@@ -21,6 +21,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import tailwind from './assets/images/tailwind2.svg'
 import { Link } from 'react-router-dom';
 import { SiExpress, SiMongodb, SiRedux, SiTailwindcss } from 'react-icons/si';
+import { useEffect } from 'react';
 
 
 AOS.init();
@@ -34,19 +35,32 @@ const Home = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
     };
+    useEffect(() => {
+       
+        document.body.style.overflow = "hidden";
+    
+        const timer = setTimeout(() => {
+          document.body.style.overflow = "auto";
+        }, 2800);
+    
+        return () => clearTimeout(timer);
+      }, []);
     return (
         <div>
             <div className="w-[98%] py-2 mx-auto min-h-[83vh] mt-1 rounded-md" style={bannerStyle}>
 
-                <div className='w-[186px] h-[232px] mt-3 flex items-center justify-center mx-auto rounded-full border-4 border-blue-600'>
+                <motion.div
+                initial={{ scale: 0.1, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }} className='w-[186px] h-[232px] mt-3 flex items-center justify-center mx-auto rounded-full border-4 border-blue-600'>
                     <img src={my_img} className='w-[170px] h-[220px] rounded-full' alt="" />
-                </div>
+                </motion.div>
                 <div className=''>
                     <div className='w-full  flex
               items-start justify-center text-white mt-4'>
                         <motion.div initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay:1 }}
                         >
                             <h1 className='text-4xl 
                    font-medium '>HI I AM SHAHADAT</h1>
@@ -56,7 +70,7 @@ const Home = () => {
                     <div className='App  mx-auto mt-3'>
                         <motion.h1 initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay: 1.4 }} className="text-white text-3xl text-center font-semibold">
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 1.5 }} className="text-white text-3xl text-center font-semibold">
                             I Am A {' '}
                             <span className='text-blue-600' style={{ color: 'text-blue-400', fontWeight: 'bold' }}>
                                 {/* Style will be inherited from the parent element */}
@@ -91,7 +105,7 @@ const Home = () => {
                 <a href="#projects">
                     <motion.button initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay: 1.9 }} className='px-7 py-4  my-10 font-medium text-white mx-auto bg-blue-600 rounded-full flex items-center space-x-3'><span>View My Works</span> <FaArrowRight></FaArrowRight> </motion.button></a>
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 2 }} className='px-7 py-4  my-10 font-medium text-white mx-auto bg-blue-600 rounded-full flex items-center space-x-3'><span>View My Works</span> <FaArrowRight></FaArrowRight> </motion.button></a>
 
             </div>
             <h1 className='text-4xl font-medium text-center my-20 text-blue-600'>About Me And My Skills</h1>
