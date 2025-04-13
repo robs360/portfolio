@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "caniuse-lite": "^1.0.30001713",
     "firebase": "^10.12.3",
     "font-awesome": "^4.7.0",
+    "framer-motion": "^12.6.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.3.1",

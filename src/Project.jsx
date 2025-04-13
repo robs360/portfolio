@@ -19,7 +19,7 @@ const Project = () => {
     <div className="mt-3 py-9 min-h-[100vh]">
       {
         info?.map(arr => {
-          
+
           if (arr.id.toString() === projectId) {
             return (
               <div className="mt-4 text-white flex w-full md:w-[96%] mx-auto gap-6
@@ -30,7 +30,14 @@ const Project = () => {
                   <h1 className="text-[17px] font-sans"><span className="text-xl font-medium">Description: </span>{arr.description}</h1>
                   <div className="flex space-x-2 items-center mt-4">
                     <FaHandPointRight />
-                    <a className="font-medium text-[17px]" href={`${arr.liveLink}`} target="_blank" rel="noopener noreferrer">Live Link</a>
+                    <a
+                      className="font-medium text-[17px]"
+                      href={arr.liveLink.startsWith('http') ? arr.liveLink : `https://${arr.liveLink}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Link
+                    </a>
                   </div>
                   {arr?.repoLink && (
                     <div className="flex space-x-2 items-center mt-2">
@@ -54,7 +61,7 @@ const Project = () => {
               </div>
             )
           }
-          return null; 
+          return null;
         })
       }
     </div>

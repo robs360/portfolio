@@ -1,28 +1,20 @@
 [
     {
-        "id":"1",
+        "id": "1",
         "name": "LifeLine (Team Project)",
         "image": "https://i.ibb.co/M8wv8Pw/project-image3.png",
         "liveLink": "https://hospital-management-4e9fc.web.app",
         "repoLink": "https://github.com/md-nahiduzzaman/lifeline",
-        "description":"LifeLine is a collaborative team project focused on hospital management,completed by react-ts, offering a seamless and user-friendly experience for various stakeholders. The platform allows users to book doctor appointments effortlessly, engage in video consultations with doctors, and communicate directly with the admin to resolve queries. For administrators, LifeLine provides robust features such as managing doctors effectively, including adding and updating profiles, allocating beds and monitoring their status, and handling payment processing for doctors with access to detailed payment history.Additionally, the platform includes a beautiful category-wise navigation bar that enhances the user experience by making it easy to navigate through various features and sections. The intuitive design ensures a smooth and visually appealing interface.The project was developed using React with TypeScript for the front end and MongoDB for the backend, ensuring a modern, efficient, and scalable solution."
+        "description": "LifeLine is a collaborative team project focused on hospital management,completed by react-ts, offering a seamless and user-friendly experience for various stakeholders. The platform allows users to book doctor appointments effortlessly, engage in video consultations with doctors, and communicate directly with the admin to resolve queries. For administrators, LifeLine provides robust features such as managing doctors effectively, including adding and updating profiles, allocating beds and monitoring their status, and handling payment processing for doctors with access to detailed payment history.Additionally, the platform includes a beautiful category-wise navigation bar that enhances the user experience by making it easy to navigate through various features and sections. The intuitive design ensures a smooth and visually appealing interface.The project was developed using React with TypeScript for the front end and MongoDB for the backend, ensuring a modern, efficient, and scalable solution."
     },
-    {
-        "id":"2",
-        "name": "CatroForum",
-        "image": "https://i.ibb.co/bdjJQGW/project-image2.png",
-        "liveLink": "https://cat-website-c0880.web.app",
-        "backendrepo": "https://github.com/robs360/Catro-forum-server",
-        "frontendrepo": "https://github.com/robs360/catro-forum",
-        "description":"Catroforum is a responsive and user-friendly website dedicated to raising awareness about pets, completed by react and their well-being. This platform allows users to donate to support pets in need, adopt pets, and explore detailed information about various pets. The website also categorizes pets for easier navigation, making it simple for users to find their desired pet based on type or category.For administrators, Catroforum offers essential features such as the ability to manage users (e.g., deleting user accounts), update the status of pets (e.g., marking a pet as adopted or available for adoption), and sell pets directly through the platform.The payment system is seamlessly integrated using Stripe, ensuring secure and efficient transactions. The project was built with React for the front end, MongoDB for the backend, and JavaScript to provide a modern, robust, and scalable solution."
-    },
-    {
-        "id":"3",
-        "name": "Job Hunting",
-        "image": "https://i.ibb.co/fQk1vMy/project-image1.png",
-        "liveLink": "https://job-hunter-3fec4.web.app",
-         "backendrepo": "https://github.com/robs360/Job-hunting-server",
-        "frontendrepo": "https://github.com/robs360/Job-hunting",
-        "description":"Job Hunting is a responsive and user-friendly website designed to connect job seekers and employers seamlessly. Users can explore job opportunities, place bids on jobs, and post job listings with ease. The platform also allows users to view detailed information about each job, ensuring transparency and clarity.The website includes robust features like search functionality for job listings, categorized job postings, and user-friendly navigation to enhance the overall experience.Built using React for the front end and MongoDB for the backend, the platform delivers a modern and efficient job-hunting solution, catering to both job seekers and employers"
+    
+    {   
+        "id": "2",
+        "name": "HCSF",
+        "image": "https://i.ibb.co.com/Pvn90L98/project.png",
+        "liveLink": "https://www.hcsfcu.com",
+        "backendrepo": "https://github.com/md-sanim-mia/student-furom-server",
+        "frontendrepo": "https://github.com/md-sanim-mia/student-furom",
+        "description": "Hathazari Central Students' Forum An esteemed student organization dedicated to fostering leadership skills among university students. It inspires participation in leadership-driven activities and provides an innovative platform for nurturing future leaders. Committed to empowering individuals for societal and future development"
     }
 ]

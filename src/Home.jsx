@@ -1,25 +1,28 @@
 import { Typewriter } from 'react-simple-typewriter';
 import bg from './assets/images/banner2.jpg'
-import c from './assets/images/c.png'
+import { motion } from "framer-motion";
 import express from './assets/images/express.png'
 import mongo from './assets/images/mongo.png'
 import c_plus from './assets/images/c++.png'
-import react from './assets/images/react.png'
+import my_img from './assets/images/my_image.jpg'
 import typeS from './assets/images/ts2.png'
-import port1 from './assets/images/port2.jpg'
-import img from './assets/images/port.jpg'
+
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaCss3, FaFacebook, FaHtml5, FaJsSquare, FaReact, FaServer, FaUser } from 'react-icons/fa';
+import { FaArrowRight, FaCss3, FaFacebook, FaHtml5, FaJsSquare, FaReact, FaServer, FaUser } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa6';
-import ts from './assets/images/ts.png'
-import project1 from './assets/images/project_image1.png'
-import project2 from './assets/images/project_image2.png'
+
+
+import project2 from './assets/images/project.png'
 import project3 from './assets/images/project_image3.png'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import tailwind from './assets/images/tailwind2.svg'
 import { Link } from 'react-router-dom';
+import { SiExpress, SiMongodb, SiRedux, SiTailwindcss } from 'react-icons/si';
+
+
 AOS.init();
 const Home = () => {
     const fa1 = <FaReact className='text-cyan-300'></FaReact>
@@ -33,71 +36,65 @@ const Home = () => {
     };
     return (
         <div>
-            <div className="w-[98%] mx-auto min-h-[90vh] mt-1 rounded-md" style={bannerStyle}>
-              
-                
-               <div className=''>
-                    <div className='w-full h-[100px] md:h-[200px] flex
-              items-end justify-center text-white'>
-                        <h1 className='text-4xl 
-                   font-medium '>Hi I AM SHAHADAT</h1>
+            <div className="w-[98%] py-2 mx-auto min-h-[83vh] mt-1 rounded-md" style={bannerStyle}>
+
+                <div className='w-[186px] h-[232px] mt-3 flex items-center justify-center mx-auto rounded-full border-4 border-blue-600'>
+                    <img src={my_img} className='w-[170px] h-[220px] rounded-full' alt="" />
+                </div>
+                <div className=''>
+                    <div className='w-full  flex
+              items-start justify-center text-white mt-4'>
+                        <motion.div initial={{ opacity: 0, y: -50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+                        >
+                            <h1 className='text-4xl 
+                   font-medium '>HI I AM SHAHADAT</h1>
+                        </motion.div>
 
                     </div>
-                    <div className='App w-[340px] mx-auto '>
-                        <h1 className="text-white text-3xl text-center font-semibold mt-8">
-                            Life is simple <br /> {' '}
-                            <span className='' style={{ color: 'text-blue-400', fontWeight: 'bold' }}>
+                    <div className='App  mx-auto mt-3'>
+                        <motion.h1 initial={{ opacity: 0, y: -50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 1.4 }} className="text-white text-3xl text-center font-semibold">
+                            I Am A {' '}
+                            <span className='text-blue-600' style={{ color: 'text-blue-400', fontWeight: 'bold' }}>
                                 {/* Style will be inherited from the parent element */}
                                 <Typewriter
-                                    words={['Salah', 'Eat', 'code', 'Repeat', 'Sleep']}
+                                    words={['MERN Stack Engineer', 'Tech Enthusiast']}
                                     loop={true}
                                     cursor
                                     cursorStyle='|'
                                     typeSpeed={70}
                                     deleteSpeed={70}
                                     delaySpeed={1000}
-                                // onLoopDone={handleDone}
-                                // onType={handleType}
+
                                 />
                             </span>
-                        </h1>
+                        </motion.h1>
                     </div>
                 </div>
-               
-                <h1 style={{ color: 'white' }} className='text-3xl font-medium
-             text-center mt-6 md:mt-14 mb-6'>
-                    My Favourite Language and Framework</h1>
-                <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 w-[90%] mx-auto p-2 py-4'>
-                <div className='w-[295px] mx-auto h-[200px] p-[6px]
-                 bg-white shadow-xl rounded-md'>
-                        <img src={react} className='w-[48px] h-[45px] mx-auto my-2' alt="" srcset="" />
-                        <p className='text-center font-medium text-[15px]'> I have start react
-                            only 6 month ago.But it have place in my favourite js library.
-                            i was done 4 project with react.With React design made very easy for me
-                            But i have gain more knowledge of react
-                        </p>
-                    </div>
-                    
-                    <div className='w-[300px] mx-auto h-[200px] p-[6px]
-                 bg-white shadow-xl rounded-md'>
-                        <img src={ts} className='w-[48px] h-[45px] mx-auto my-2' alt="" srcset="" />
-                        <p className='text-center font-medium text-[15px]'> TypeScript is a powerful, strongly typed superset of JavaScript that compiles to plain JavaScript. It brings static typing to JavaScript, which helps developers catch potential errors early, improving code reliability and maintainability.
-                        </p>
-                    </div>
-                    <div className='w-[295px] mx-auto h-[200px]
-                 bg-white shadow-xl rounded-md p-[6px]'>
-                        <img src={c} className='w-[48px] h-[45px] mx-auto my-1' alt="" srcset="" />
-                        <p className='text-center font-medium text-[15px]'> I have
-                            start my programming life with c. But many thing in c are rigorous or
-                            harsh for me because there are no built in library like STL.
-                            And was involved in compititive programming with c++.
-                        </p>
-                    </div>
 
-                   
+                <div className='flex justify-center'>
+                    <h1 className='text-white mt-4 text-center font-medium text-[17px] p-4 rounded-md bg-black'>
+                        <Typewriter words={["I'm building scalable web applications with modern technologies. Passionate about creating meaningful digital experiences that make a difference."]}
+                            loop={1}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={30}
+                            deleteSpeed={70}
+                            delaySpeed={100} />
+
+                    </h1>
                 </div>
+
+                <a href="#projects">
+                    <motion.button initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 1.9 }} className='px-7 py-4  my-10 font-medium text-white mx-auto bg-blue-600 rounded-full flex items-center space-x-3'><span>View My Works</span> <FaArrowRight></FaArrowRight> </motion.button></a>
+
             </div>
-            <h1 className='text-4xl font-medium text-center my-20 text-white'>About Me And My Skills</h1>
+            <h1 className='text-4xl font-medium text-center my-20 text-blue-600'>About Me And My Skills</h1>
 
             <div className='flex'>
                 <VerticalTimeline className='my-10'>
@@ -122,6 +119,9 @@ const Home = () => {
 
                                 In my free time, I enjoy traveling and
                                 reading, which fuel my creativity and broaden my perspective.
+                                My skills in front-end are React,Next,TypeScript, Firebase, Tailwind etc,
+                                And in back-end are c++, MongoDB, Express.js and jwt.
+
                             </p>
                         </div>
                     </VerticalTimelineElement>
@@ -135,12 +135,34 @@ const Home = () => {
                     >
 
                         <div className='grid grid-cols-3 gap-y-10 my-8'>
-                            <FaReact className='mx-auto text-4xl text-cyan-300'></FaReact>
-                            <img src={typeS} className='mx-auto w-[40px] h-[40px]' alt="" srcset="" />
-                            <FaJsSquare className='mx-auto text-4xl text-cyan-300'></FaJsSquare>
-                            <img src={tailwind} className='mx-auto w-[40px] h-[40px]' alt="" srcset="" />
-                            <FaCss3 className='mx-auto text-4xl text-cyan-300'></FaCss3>
-                            <FaHtml5 className='mx-auto text-4xl text-orange-300'></FaHtml5>
+                            <div>
+                                <FaReact className='mx-auto text-4xl text-cyan-300'></FaReact>
+                                <h1 className='text-cyan-300 font-medium text-center'>React</h1>
+                            </div>
+                            <div>
+                                <SiRedux className='mx-auto text-4xl text-cyan-300'></SiRedux>
+                                <h1 className='text-cyan-300 font-medium text-center'>Redux</h1>
+                            </div>
+                            <div>
+                                <img src={typeS} className='mx-auto w-[40px] h-[40px]' alt="" srcset="" />
+                                <h1 className='text-cyan-300 font-medium text-center'>TypeScript</h1>
+                            </div>
+                            <div>
+                                <FaJsSquare className='mx-auto text-4xl text-cyan-300'></FaJsSquare>
+                                <h1 className='text-cyan-300 font-medium text-center'>JavaScript</h1>
+                            </div>
+                            <div>
+                                <img src={tailwind} className='mx-auto w-[40px] h-[40px]' alt="" srcset="" />
+                                <h1 className='text-cyan-300 font-medium text-center'>Tailwind</h1>
+                            </div>
+                            <div>
+                                <FaCss3 className='mx-auto text-4xl text-cyan-300'></FaCss3>
+                                <h1 className='text-cyan-300 font-medium text-center'>CSS</h1>
+                            </div>
+                            <div>
+                                <FaHtml5 className='mx-auto text-4xl text-orange-300'></FaHtml5>
+                                <h1 className='text-cyan-300 font-medium text-center'>HTML5</h1>
+                            </div>
 
                         </div>
                     </VerticalTimelineElement>
@@ -163,9 +185,9 @@ const Home = () => {
                 </VerticalTimeline>
             </div>
             <div className='mt-24'>
-                <h1 style={{ color: 'white' }} className='text-4xl text-center mt-12 mb-12 font-medium'>Some Picture of my Project</h1>
-                <div className='flex justify-evenly flex-wrap gap-5'>
-                    <div className="relative w-[360px] md:w-[390px] bg-black p-5 rounded-lg shadow-md group overflow-hidden">
+                <h1 className='text-blue-600 text-4xl text-center mt-12 mb-12 font-medium'>Some of my Project</h1>
+                <div id='projects' className='flex justify-evenly flex-wrap gap-5'>
+                    <div className="relative w-[360px] md:w-[390px] border border-[rgba(255,255,255,0.05)] bg-[#0000001a] p-5 rounded-lg group overflow-hidden">
 
                         <img
                             src={project3}
@@ -177,13 +199,22 @@ const Home = () => {
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
 
-                        <button className="absolute h-[40px] bg-cyan-300 font-medium p-2 rounded-md opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                        <Link to={'/project/1'}>Show Details</Link>
+                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
+                            <Link to={'/project/1'}>Show Details</Link>
                         </button>
-                        <p className='mt-2 text-white font-medium'>Project Name: LifeLine (Team Project)</p>
+                        <p className='my-2 text-blue-600 font-medium text-[17px]'>LifeLine (Team Project)</p>
+                        <p className='text-gray-400'>Lifeline is a hospital management project with a wide dashboard
+                            user, doctor and admin. Main Features is dr appointment and vedio conversation with doctor.
+                        </p>
+                        <div className='flex gap-x-5 mt-5'>
+                            <FaReact className='text-blue-500 text-[22px]'></FaReact>
+                            <SiTailwindcss className='text-cyan-400 text-[24px]'></SiTailwindcss>
+                            <SiExpress className='text-green-700 text-[24px]'></SiExpress>
+                            <SiMongodb className='text-green-800 text-[24px]'></SiMongodb>
+                        </div>
                     </div>
 
-                    <div className="relative w-[360px] md:w-[390px] bg-black p-5 rounded-lg shadow-md group overflow-hidden">
+                    <div className="relative w-[360px] md:w-[390px] border border-[rgba(255,255,255,0.05)] bg-[#0000001a] p-5 rounded-lg shadow-md group overflow-hidden">
 
                         <img
                             src={project2}
@@ -195,42 +226,33 @@ const Home = () => {
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
 
-                        <button className="absolute h-[40px] bg-cyan-300 font-medium p-2 rounded-md opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
+                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
                             <Link to={'/project/2'}>Show Details</Link>
                         </button>
 
-                        <p className='font-medium text-white mt-2'>Project Name: CatroForum</p>
+                        <p className='font-medium text-[17px] text-blue-600 mt-2'>HCSF</p>
+                        <p className='text-gray-400 mt-3'>HCSF is student forum website of Chittagong University with user and admin dashboard.
+                            The main features are managing blood, tution and blog post
+                        </p>
 
+                        <div className='flex gap-x-5 mt-5'>
+                            <FaReact className='text-blue-500 text-[22px]'></FaReact>
+                            <SiTailwindcss className='text-cyan-400 text-[24px]'></SiTailwindcss>
+                            <SiExpress className='text-green-700 text-[24px]'></SiExpress>
+                            <SiMongodb className='text-green-800 text-[24px]'></SiMongodb>
+                        </div>
                     </div>
-                    <div className="relative w-[360px] md:w-[390px] bg-black p-5 rounded-lg shadow-md group overflow-hidden">
 
-                        <img
-                            src={project1}
-                            className="w-full h-[280px] object-cover"
-                            alt="Project"
-                        />
-
-
-                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-
-
-                        <button className="absolute h-[40px] bg-cyan-300 font-medium p-2 rounded-md opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                        <Link to={'/project/3'}>Show Details</Link>
-                        </button>
-                        <p className='mt-2 text-white font-medium'>Project Name: Job Hunting</p>
-                    </div>
                 </div>
             </div>
             <div>
-                <h1 className='text-3xl font-medium text-white text-center my-16'>
+                <h1 className='text-3xl text-blue-600 font-medium  text-center my-16'>
                     Contact Or Connect With Me</h1>
 
-                <div className='w-[95%] p-2 py-4 mb-8 mx-auto border-2
+                <div className='w-[95%] p-2 py-4 mb-8 mx-auto
               rounded-md flex items-center
               justify-center md:flex-row flex-col gap-4'>
-                    <div>
-                        <img src={port1} className='w-[200px] h-[280px] rounded-[50%]' alt="" srcset="" />
-                    </div>
+
                     <div className='w-[98%] text-white md:w-[52%] lg:w-[36%]'>
                         <h1 className='text-center text-3xl font-medium'>Social Media Link</h1>
                         <div className='w-[300px] mt-5 mx-auto flex justify-evenly'>

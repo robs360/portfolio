@@ -1,17 +1,16 @@
-import React from "react";
-import port from './assets/images/port.jpg'
 
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaEnvelope, FaFile, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 import 'font-awesome/css/font-awesome.min.css';
 import { FaLinkedin } from "react-icons/fa6";
 
 const Nav = () => {
-    const bg = {
-        backgroundColor: 'orange'
-    };
     return (
-        <div className="w-full mx-auto p-1 md:w-[550px]">
+        <motion.div initial={{ opacity: 0,y:-50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-full mx-auto p-1 md:w-[550px]">
             <div className="w-[360px] md:w-[550px] py-3 rounded-l-[32px] rounded-r-[32px] flex border-2 border-blue-400 space-x-3 md:space-x-4 md:justify-center
              items-center px-2 z-50 text-white  mt-4 mx-auto" >
                 <div className="ml-2 md:ml-0">
@@ -37,7 +36,7 @@ const Nav = () => {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 export default Nav
