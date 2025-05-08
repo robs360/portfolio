@@ -192,95 +192,98 @@ const Home = () => {
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>
-            <div className='mt-24'>
-                <h1 className='text-blue-600 text-4xl text-center mt-12 mb-12 font-medium'>Some of my Project</h1>
-                <div id='projects' className='flex justify-evenly flex-wrap gap-5'>
-                    <div className="relative w-[360px] md:w-[390px] border border-[rgba(255,255,255,0.05)] bg-[#0000001a] p-5 rounded-lg group overflow-hidden">
+            <div className="mt-24">
+                <h1 className="text-blue-600 text-4xl text-center mt-12 mb-12 font-semibold">
+                    Some of my Projects
+                </h1>
 
+                <div id="projects" className="flex justify-evenly flex-wrap gap-8 px-4">
+                    {/* Project 1 */}
+                    <div className="relative w-[360px] md:w-[390px] border border-white/10 bg-white/5 p-5 rounded-2xl shadow-lg group overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
                         <img
                             src={project3}
-                            className="w-full h-[280px] object-cover"
                             alt="Project"
+                            className="w-full h-[280px] object-cover rounded-xl"
                         />
 
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
-                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-
-
-                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            <Link to={'/project/1'}>Show Details</Link>
+                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-1/2 -translate-x-1/2 -bottom-6 transition-all duration-500 group-hover:opacity-100 group-hover:bottom-[45%]">
+                            <Link to="/project/1">Show Details</Link>
                         </button>
-                        <p className='my-2 text-blue-600 font-medium text-[17px]'>LifeLine (Team Project)</p>
-                        <p className='text-gray-400'>Lifeline is a hospital management project with a wide dashboard
-                            user, doctor and admin. Main Features is dr appointment and vedio conversation with doctor.
+
+                        <p className="my-3 text-blue-600 font-semibold text-lg">LifeLine (Team Project)</p>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                            Lifeline is a hospital management project with a wide dashboard for users, doctors, and admins. Main features include doctor appointments and video consultations.
                         </p>
-                        <div className='flex gap-x-5 mt-5'>
-                            <FaReact className='text-blue-500 text-[25px]'></FaReact>
-                            <SiTypescript className='text-orange-300 text-[24px]'></SiTypescript>
-                            <SiTailwindcss className='text-cyan-400 text-[25px]'></SiTailwindcss>
-                            <SiExpress className='text-green-700 text-[26px]'></SiExpress>
-                            <SiMongodb className='text-green-800 text-[26px]'></SiMongodb>
+
+                        <div className="flex gap-4 mt-5 text-[24px]">
+                            <FaReact className="text-blue-500" />
+                            <SiTypescript className="text-orange-300" />
+                            <SiTailwindcss className="text-cyan-400" />
+                            <SiExpress className="text-green-700" />
+                            <SiMongodb className="text-green-800" />
                         </div>
                     </div>
-                    <div className="relative w-[360px] md:w-[390px] border border-[rgba(255,255,255,0.05)] bg-[#0000001a] p-5 rounded-lg group overflow-hidden">
 
+                    {/* Project 2 */}
+                    <div className="relative w-[360px] md:w-[390px] border border-white/10 bg-white/5 p-5 rounded-2xl shadow-lg group overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
                         <img
                             src="https://i.ibb.co.com/6Jmch326/project3.png"
-                            className="w-full h-[280px] object-cover"
                             alt="Project"
+                            className="w-full h-[280px] object-cover rounded-xl"
                         />
 
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
-                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-
-
-                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            <Link to={'/project/2'}>Show Details</Link>
+                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-1/2 -translate-x-1/2 -bottom-6 transition-all duration-500 group-hover:opacity-100 group-hover:bottom-[45%]">
+                            <Link to="/project/2">Show Details</Link>
                         </button>
-                        <p className='my-2 text-blue-600 font-medium text-[17px]'>E-Travel (On Building)</p>
-                        <p className='text-gray-400'>It’s a robust Next Js project solve the travel related problem like travel guidance, hotel book andbus ticket. Where i used Redux toolkit, Redux persist and shadcn ui. I tried to do clear code and follow dry principle by creating reusable components.
+
+                        <p className="my-3 text-blue-600 font-semibold text-lg">E-Travel (In Progress)</p>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                            A robust Next.js project addressing travel needs like guidance, hotel booking, and bus tickets. Built with Redux Toolkit, Redux Persist, and ShadCN UI using reusable components and DRY principles.
                         </p>
-                        <div className='flex gap-x-5 mt-5'>
-                            <SiNextdotjs className='text-blue-500 text-[22px]'></SiNextdotjs>
-                            <SiTypescript className='text-orange-300 text-[24px]'></SiTypescript>
-                            <SiTailwindcss className='text-cyan-400 text-[24px]'></SiTailwindcss>
-                            <SiExpress className='text-green-700 text-[26px]'></SiExpress>
-                            <SiMongodb className='text-green-800 text-[26px]'></SiMongodb>
+
+                        <div className="flex gap-4 mt-5 text-[22px]">
+                            <SiNextdotjs className="text-blue-500" />
+                            <SiTypescript className="text-orange-300" />
+                            <SiTailwindcss className="text-cyan-400" />
+                            <SiExpress className="text-green-700 text-[24px]" />
+                            <SiMongodb className="text-green-800 text-[24px]" />
                         </div>
                     </div>
 
-                    <div className="relative w-[360px] md:w-[390px] border border-[rgba(255,255,255,0.05)] bg-[#0000001a] p-5 rounded-lg shadow-md group overflow-hidden">
-
+                    {/* Project 3 */}
+                    <div className="relative w-[360px] md:w-[390px] border border-white/10 bg-white/5 p-5 rounded-2xl shadow-lg group overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
                         <img
                             src={project2}
-                            className="w-full h-[280px]"
                             alt="Project"
+                            className="w-full h-[280px] object-cover rounded-xl"
                         />
 
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
-                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-
-
-                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            <Link to={'/project/3'}>Show Details</Link>
+                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-1/2 -translate-x-1/2 -bottom-6 transition-all duration-500 group-hover:opacity-100 group-hover:bottom-[45%]">
+                            <Link to="/project/3">Show Details</Link>
                         </button>
 
-                        <p className='font-medium text-[17px] text-blue-600 mt-2'>HCSF</p>
-                        <p className='text-gray-400 mt-3'>HCSF is student forum website of Chittagong University with user and admin dashboard.
-                            The main features are managing blood, tution and blog post
+                        <p className="my-3 text-blue-600 font-semibold text-lg">HCSF</p>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                            HCSF is a student forum for Chittagong University with user and admin dashboards. Key features include blood management, tuition coordination, and blog posting.
                         </p>
 
-                        <div className='flex gap-x-5 mt-5'>
-                            <FaReact className='text-blue-500 text-[25px]'></FaReact>
-                            <SiTypescript className='text-orange-300 text-[24px]'></SiTypescript>
-                            <SiTailwindcss className='text-cyan-400 text-[25px]'></SiTailwindcss>
-                            <SiExpress className='text-green-700 text-[26px]'></SiExpress>
-                            <SiMongodb className='text-green-800 text-[26px]'></SiMongodb>
+                        <div className="flex gap-4 mt-5 text-[24px]">
+                            <FaReact className="text-blue-500" />
+                            <SiTypescript className="text-orange-300" />
+                            <SiTailwindcss className="text-cyan-400" />
+                            <SiExpress className="text-green-700" />
+                            <SiMongodb className="text-green-800" />
                         </div>
                     </div>
-
                 </div>
             </div>
+
             <div>
                 <h1 className='text-3xl text-blue-600 font-medium  text-center my-16'>
                     Contact Or Connect With Me</h1>
