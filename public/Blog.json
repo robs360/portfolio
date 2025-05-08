@@ -7,9 +7,17 @@
         "repoLink": "https://github.com/md-nahiduzzaman/lifeline",
         "description": "LifeLine is a collaborative team project focused on hospital management,completed by react-ts, offering a seamless and user-friendly experience for various stakeholders. The platform allows users to book doctor appointments effortlessly, engage in video consultations with doctors, and communicate directly with the admin to resolve queries. For administrators, LifeLine provides robust features such as managing doctors effectively, including adding and updating profiles, allocating beds and monitoring their status, and handling payment processing for doctors with access to detailed payment history.Additionally, the platform includes a beautiful category-wise navigation bar that enhances the user experience by making it easy to navigate through various features and sections. The intuitive design ensures a smooth and visually appealing interface.The project was developed using React with TypeScript for the front end and MongoDB for the backend, ensuring a modern, efficient, and scalable solution."
     },
-    
-    {   
+    {
         "id": "2",
+        "name": "E-Travel (On Building)",
+        "image": "https://i.ibb.co.com/6Jmch326/project3.png",
+        "liveLink": "https://e-ticket-client-robs360-shahadats-projects-55bc8ce7.vercel.app/",
+        "frontendrepo": "https://github.com/robs360/E-Travel",
+        "backendrepo": "https://github.com/robs360/e-travell-server",
+        "description": " It’s a robust Next Js project solve the travel related problem like travel guidance, hotel book andbus ticket. Where i used Redux toolkit, Redux persist and shadcn ui. I tried to do clear code and follow dry principle by creating reusable components."
+    },
+    {   
+        "id": "3",
         "name": "HCSF",
         "image": "https://i.ibb.co.com/Pvn90L98/project.png",
         "liveLink": "https://www.hcsfcu.com",

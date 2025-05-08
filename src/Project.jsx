@@ -10,61 +10,86 @@ const Project = () => {
   useEffect(() => {
     fetch('/Blog.json')
       .then(res => res.json())
-      .then(data => setInfo(data))
-  }, [])
+      .then(data => {
+        const foundItem = data.find((item) => item.id === projectId);
+        console.log(foundItem)
+        if (foundItem) {
+          setInfo(foundItem);
+        }
+      });
+  }, [projectId]);
 
-  console.log(info)
+  console.log(info, typeof (info))
 
   return (
-    <div className="mt-3 py-9 min-h-[100vh]">
-      {
-        info?.map(arr => {
+    <div className="mt-10 p-8 md:p-10 w-[96%] md:w-[90%] mx-auto rounded-3xl
+     bg-gradient-to-br from-[#1a1a1a] to-[#111] border border-gray-800 shadow-[0_8px_30px_rgb(0,0,0,0.5)] 
+    flex flex-col justify-center items-center lg:justify-start lg:flex-row lg:items-start gap-8 transition-all duration-500">
+      <img
+        src={info.image}
+        alt="Project Preview"
+        className="w-full md:w-[400px] rounded-2xl object-cover shadow-xl hover:scale-105 transition-transform duration-300"
+      />
 
-          if (arr.id.toString() === projectId) {
-            return (
-              <div className="mt-4 text-white flex w-full md:w-[96%] mx-auto gap-6
-                border-[3px] border-gray-400 p-4 rounded-md flex-col md:flex-row">
-                <img src={arr.image} className="w-full h-[320px] md:w-[420px] md:h-[340px]" alt="" />
-                <div>
-                  <h1 className="text-2xl font-medium my-2">{arr.name}</h1>
-                  <h1 className="text-[17px] font-sans"><span className="text-xl font-medium">Description: </span>{arr.description}</h1>
-                  <div className="flex space-x-2 items-center mt-4">
-                    <FaHandPointRight />
-                    <a
-                      className="font-medium text-[17px]"
-                      href={arr.liveLink.startsWith('http') ? arr.liveLink : `https://${arr.liveLink}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Link
-                    </a>
-                  </div>
-                  {arr?.repoLink && (
-                    <div className="flex space-x-2 items-center mt-2">
-                      <FaHandPointRight />
-                      <a className="font-medium text-[17px]" href={`${arr.repoLink}`} target="_blank" rel="noopener noreferrer">Repository Link</a>
-                    </div>
-                  )}
-                  {arr?.frontendrepo && (
-                    <div className="flex space-x-2 items-center mt-2">
-                      <FaHandPointRight />
-                      <a className="font-medium text-[17px]" href={`${arr.frontendrepo}`} target="_blank" rel="noopener noreferrer">Front End Repository</a>
-                    </div>
-                  )}
-                  {arr?.backendrepo && (
-                    <div className="flex space-x-2 items-center mt-2">
-                      <FaHandPointRight />
-                      <a className="font-medium text-[17px]" href={`${arr.backendrepo}`} target="_blank" rel="noopener noreferrer">Back End Repository</a>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )
-          }
-          return null;
-        })
-      }
+      <div className="flex-1 flex flex-col text-gray-300">
+        <h1 className="text-3xl font-extrabold text-white mb-4 tracking-wide">
+          {info.name}
+        </h1>
+
+        <p className="text-gray-400 mb-6 leading-relaxed text-[16px]">
+          {info.description}
+        </p>
+
+        <div className="flex flex-col lg:flex-row gap-4">
+          {info.liveLink && (
+            <a
+              href={info.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 flex justify-center w-full lg:w-auto hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+            >
+              <span>🌐 Live Preview</span>
+            </a>
+          )}
+
+          {info.frontendrepo && (
+            <a
+              href={info.frontendrepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 flex justify-center w-full lg:w-auto hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+            >
+             <span>💻 Front-End Code</span>
+            </a>
+          )}
+
+          {info.backendrepo && (
+            <a
+              href={info.backendrepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-600 flex justify-center w-full lg:w-auto hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+            >
+              <span>🛠️ Back-End Code</span>
+            </a>
+          )}
+
+          {info.repoLink && (
+            <a
+              href={info.repoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-purple-600 flex justify-center hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 w-fit"
+            >
+              <span>📦 Full Repository</span>
+            </a>
+          )}
+        </div>
+
+      </div>
     </div>
+
+
   )
 }
 

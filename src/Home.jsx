@@ -20,7 +20,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import tailwind from './assets/images/tailwind2.svg'
 import { Link } from 'react-router-dom';
-import { SiExpress, SiMongodb, SiRedux, SiTailwindcss } from 'react-icons/si';
+import { SiExpress, SiMongodb, SiNextdotjs, SiRedux, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { useEffect } from 'react';
 
 
@@ -29,30 +29,24 @@ const Home = () => {
     const fa1 = <FaReact className='text-cyan-300'></FaReact>
     const fa2 = <FaServer className='text-cyan-300'></FaServer>
     const fa3 = <FaUser className='text-cyan-300'></FaUser>
-    const bannerStyle = {
-        backgroundImage: `url(${bg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-    };
     useEffect(() => {
-       
+
         document.body.style.overflow = "hidden";
-    
+
         const timer = setTimeout(() => {
-          document.body.style.overflow = "auto";
+            document.body.style.overflow = "auto";
         }, 2800);
-    
+
         return () => clearTimeout(timer);
-      }, []);
+    }, []);
     return (
         <div>
-            <div className="w-[98%] py-2 mx-auto min-h-[83vh] mt-1 rounded-md" style={bannerStyle}>
+            <div className="w-[98%] py-2 mx-auto min-h-[83vh] mt-1 rounded-md">
 
                 <motion.div
-                initial={{ scale: 0.1, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5, ease: 'easeOut' }} className='w-[186px] h-[232px] mt-3 flex items-center justify-center mx-auto rounded-full border-4 border-blue-600'>
+                    initial={{ scale: 0.1, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }} className='w-[186px] h-[232px] mt-3 flex items-center justify-center mx-auto rounded-full border-4 border-blue-600'>
                     <img src={my_img} className='w-[170px] h-[220px] rounded-full' alt="" />
                 </motion.div>
                 <div className=''>
@@ -60,7 +54,7 @@ const Home = () => {
               items-start justify-center text-white mt-4'>
                         <motion.div initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay:1 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
                         >
                             <h1 className='text-4xl 
                    font-medium '>HI I AM SHAHADAT</h1>
@@ -90,16 +84,20 @@ const Home = () => {
                 </div>
 
                 <div className='flex justify-center'>
-                    <h1 className='text-white mt-4 text-center font-medium text-[17px] p-4 rounded-md bg-black'>
-                        <Typewriter words={["I'm building scalable web applications with modern technologies. Passionate about creating meaningful digital experiences that make a difference."]}
+                    <div className='text-gray-300 mt-4 text-center font-medium text-[17px] p-4 rounded-md whitespace-pre-line'>
+                        <Typewriter
+                            words={[
+                                "I'm building scalable and robust web applications using JavaScript and its frameworks like React and Next.js.\nPassionate about creating meaningful digital experiences that make a difference.",
+                            ]}
                             loop={1}
                             cursor
-                            cursorStyle='|'
+                            cursorStyle="|"
                             typeSpeed={30}
                             deleteSpeed={70}
-                            delaySpeed={100} />
+                            delaySpeed={100}
+                        />
 
-                    </h1>
+                    </div>
                 </div>
 
                 <a href="#projects">
@@ -122,17 +120,13 @@ const Home = () => {
                     >
                         <div>
                             <p className='text-[15px]'>
-                                I am Shahadat Hossen Nayem, a student at
-                                the International Islamic University,
-                                Chittagong. I currently reside in
-                                Chittagong and aspire to become a
-                                full-stack MERN developer, building
-                                on my front-end skills. My goal is to
+                                I'm a passionate Full Stack Engineer with extensive
+                                experience in building modern web applications. My goal is to
                                 contribute meaningfully to the tech
                                 industry by generating and refining innovative ideas.
 
-                                In my free time, I enjoy traveling and
-                                reading, which fuel my creativity and broaden my perspective.
+                                My journey in software development has led me to work with
+                                various technologies and architectures.
                                 My skills in front-end are React,Next,TypeScript, Firebase, Tailwind etc,
                                 And in back-end are c++, MongoDB, Express.js and jwt.
 
@@ -148,7 +142,7 @@ const Home = () => {
                         icon={fa1}
                     >
 
-                        <div className='grid grid-cols-3 gap-y-10 my-8'>
+                        <div className='grid grid-cols-3 gap-y-4'>
                             <div>
                                 <FaReact className='mx-auto text-4xl text-cyan-300'></FaReact>
                                 <h1 className='text-cyan-300 font-medium text-center'>React</h1>
@@ -221,10 +215,37 @@ const Home = () => {
                             user, doctor and admin. Main Features is dr appointment and vedio conversation with doctor.
                         </p>
                         <div className='flex gap-x-5 mt-5'>
-                            <FaReact className='text-blue-500 text-[22px]'></FaReact>
+                            <FaReact className='text-blue-500 text-[25px]'></FaReact>
+                            <SiTypescript className='text-orange-300 text-[24px]'></SiTypescript>
+                            <SiTailwindcss className='text-cyan-400 text-[25px]'></SiTailwindcss>
+                            <SiExpress className='text-green-700 text-[26px]'></SiExpress>
+                            <SiMongodb className='text-green-800 text-[26px]'></SiMongodb>
+                        </div>
+                    </div>
+                    <div className="relative w-[360px] md:w-[390px] border border-[rgba(255,255,255,0.05)] bg-[#0000001a] p-5 rounded-lg group overflow-hidden">
+
+                        <img
+                            src="https://i.ibb.co.com/6Jmch326/project3.png"
+                            className="w-full h-[280px] object-cover"
+                            alt="Project"
+                        />
+
+
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+
+                        <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
+                            <Link to={'/project/2'}>Show Details</Link>
+                        </button>
+                        <p className='my-2 text-blue-600 font-medium text-[17px]'>E-Travel (On Building)</p>
+                        <p className='text-gray-400'>It’s a robust Next Js project solve the travel related problem like travel guidance, hotel book andbus ticket. Where i used Redux toolkit, Redux persist and shadcn ui. I tried to do clear code and follow dry principle by creating reusable components.
+                        </p>
+                        <div className='flex gap-x-5 mt-5'>
+                            <SiNextdotjs className='text-blue-500 text-[22px]'></SiNextdotjs>
+                            <SiTypescript className='text-orange-300 text-[24px]'></SiTypescript>
                             <SiTailwindcss className='text-cyan-400 text-[24px]'></SiTailwindcss>
-                            <SiExpress className='text-green-700 text-[24px]'></SiExpress>
-                            <SiMongodb className='text-green-800 text-[24px]'></SiMongodb>
+                            <SiExpress className='text-green-700 text-[26px]'></SiExpress>
+                            <SiMongodb className='text-green-800 text-[26px]'></SiMongodb>
                         </div>
                     </div>
 
@@ -241,7 +262,7 @@ const Home = () => {
 
 
                         <button className="absolute text-white rounded-full h-[40px] bg-blue-600 font-medium p-2 px-4 opacity-0 left-[35%] -bottom-6 transition-all duration-600 group-hover:opacity-100 group-hover:bottom-[45%]">
-                            <Link to={'/project/2'}>Show Details</Link>
+                            <Link to={'/project/3'}>Show Details</Link>
                         </button>
 
                         <p className='font-medium text-[17px] text-blue-600 mt-2'>HCSF</p>
@@ -250,10 +271,11 @@ const Home = () => {
                         </p>
 
                         <div className='flex gap-x-5 mt-5'>
-                            <FaReact className='text-blue-500 text-[22px]'></FaReact>
-                            <SiTailwindcss className='text-cyan-400 text-[24px]'></SiTailwindcss>
-                            <SiExpress className='text-green-700 text-[24px]'></SiExpress>
-                            <SiMongodb className='text-green-800 text-[24px]'></SiMongodb>
+                            <FaReact className='text-blue-500 text-[25px]'></FaReact>
+                            <SiTypescript className='text-orange-300 text-[24px]'></SiTypescript>
+                            <SiTailwindcss className='text-cyan-400 text-[25px]'></SiTailwindcss>
+                            <SiExpress className='text-green-700 text-[26px]'></SiExpress>
+                            <SiMongodb className='text-green-800 text-[26px]'></SiMongodb>
                         </div>
                     </div>
 
