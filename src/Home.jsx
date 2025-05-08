@@ -57,7 +57,7 @@ const Home = () => {
                             transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
                         >
                             <h1 className='text-4xl 
-                   font-medium '>HI I AM SHAHADAT</h1>
+                   font-medium '><span className='text-gray-500'>HI I</span> AM SHAHADAT</h1>
                         </motion.div>
 
                     </div>
@@ -112,86 +112,95 @@ const Home = () => {
                 <VerticalTimeline className='my-10'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: 'black', color: '#fff' }}
+                        contentStyle={{ background: 'black', color: '#fff', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                         date="About Me"
                         iconStyle={{ background: 'black', color: 'white' }}
                         icon={fa3}
                     >
                         <div>
-                            <p className='text-[15px]'>
-                                I'm a passionate Full Stack Engineer with extensive
+                            <p className='text-[15px] leading-relaxed text-gray-200'>
+                                I'm a passionate <span className="text-cyan-400 font-semibold">Full Stack Engineer</span> with extensive
                                 experience in building modern web applications. My goal is to
                                 contribute meaningfully to the tech
-                                industry by generating and refining innovative ideas.
-
+                                industry by generating and refining innovative ideas.<br /><br />
                                 My journey in software development has led me to work with
                                 various technologies and architectures.
-                                My skills in front-end are React,Next,TypeScript, Firebase, Tailwind etc,
-                                And in back-end are c++, MongoDB, Express.js and jwt.
-
+                                My skills in front-end are <span className="text-blue-300">React, Next.js, TypeScript, Firebase, Tailwind</span> etc,
+                                and in back-end: <span className="text-blue-300">C++, MongoDB, Express.js, JWT</span>.
                             </p>
                         </div>
                     </VerticalTimelineElement>
+
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: 'black', color: 'white' }}
+                        contentStyle={{ background: 'black', color: 'white', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                         date="Front-End"
                         iconStyle={{ background: 'black', color: '#fff' }}
                         icon={fa1}
                     >
-
-                        <div className='grid grid-cols-3 gap-y-4'>
-                            <div>
-                                <FaReact className='mx-auto text-4xl text-cyan-300'></FaReact>
-                                <h1 className='text-cyan-300 font-medium text-center'>React</h1>
+                        <div className='grid grid-cols-3 gap-y-6 pt-2'>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <FaReact className='mx-auto text-4xl text-cyan-300' />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>React</h1>
                             </div>
-                            <div>
-                                <SiRedux className='mx-auto text-4xl text-cyan-300'></SiRedux>
-                                <h1 className='text-cyan-300 font-medium text-center'>Redux</h1>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <SiRedux className='mx-auto text-4xl text-cyan-300' />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>Redux</h1>
                             </div>
-                            <div>
-                                <img src={typeS} className='mx-auto w-[40px] h-[40px]' alt="" srcset="" />
-                                <h1 className='text-cyan-300 font-medium text-center'>TypeScript</h1>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <img src={typeS} className='mx-auto w-[40px] h-[40px]' alt="TypeScript" />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>TypeScript</h1>
                             </div>
-                            <div>
-                                <FaJsSquare className='mx-auto text-4xl text-cyan-300'></FaJsSquare>
-                                <h1 className='text-cyan-300 font-medium text-center'>JavaScript</h1>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <FaJsSquare className='mx-auto text-4xl text-cyan-300' />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>JavaScript</h1>
                             </div>
-                            <div>
-                                <img src={tailwind} className='mx-auto w-[40px] h-[40px]' alt="" srcset="" />
-                                <h1 className='text-cyan-300 font-medium text-center'>Tailwind</h1>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <img src={tailwind} className='mx-auto w-[40px] h-[40px]' alt="Tailwind" />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>Tailwind</h1>
                             </div>
-                            <div>
-                                <FaCss3 className='mx-auto text-4xl text-cyan-300'></FaCss3>
-                                <h1 className='text-cyan-300 font-medium text-center'>CSS</h1>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <FaCss3 className='mx-auto text-4xl text-cyan-300' />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>CSS</h1>
                             </div>
-                            <div>
-                                <FaHtml5 className='mx-auto text-4xl text-orange-300'></FaHtml5>
-                                <h1 className='text-cyan-300 font-medium text-center'>HTML5</h1>
+                            <div className="hover:scale-110 transition-transform duration-300 col-span-3 flex flex-col items-center">
+                                <FaHtml5 className='text-4xl text-orange-300' />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>HTML5</h1>
                             </div>
-
                         </div>
                     </VerticalTimelineElement>
+
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: 'black', color: 'white' }}
+                        contentStyle={{ background: 'black', color: 'white', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                         date="Back-End"
                         iconStyle={{ background: 'black', color: '#fff' }}
                         icon={fa2}
-
                     >
                         <div className='grid grid-cols-4 gap-y-10 my-8 items-center'>
-                            <img src={express} className='w-[40px] h-[40px]' alt="" srcset="" />
-                            <img src={mongo} className='w-[40px] h-[40px]' alt="" srcset="" />
-                            <img src={c_plus} className='w-[40px] h-[40px]' alt="" srcset="" />
-                            <h1 className='font-medium'>JWT</h1>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <img src={express} className='w-[40px] h-[40px] mx-auto' alt="Express.js" />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>Express</h1>
+                            </div>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <img src={mongo} className='w-[40px] h-[40px] mx-auto' alt="MongoDB" />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>MongoDB</h1>
+                            </div>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <img src={c_plus} className='w-[40px] h-[40px] mx-auto' alt="C++" />
+                                <h1 className='text-cyan-300 font-medium text-center mt-1'>C++</h1>
+                            </div>
+                            <div className="hover:scale-110 transition-transform duration-300">
+                                <h1 className='text-cyan-300 font-medium text-center text-[15px]'>JWT</h1>
+                            </div>
                         </div>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>
+
             <div className="mt-24">
                 <h1 className="text-blue-600 text-4xl text-center mt-12 mb-12 font-semibold">
                     Some of my Projects
@@ -284,33 +293,58 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>
-                <h1 className='text-3xl text-blue-600 font-medium  text-center my-16'>
-                    Contact Or Connect With Me</h1>
+            <footer className="mt-12 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white pt-12 pb-8 px-4">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <div className='w-[95%] p-2 py-4 mb-8 mx-auto
-              rounded-md flex items-center
-              justify-center md:flex-row flex-col gap-4'>
+                    {/* Contact Section */}
+                    <div className="text-center md:text-left">
+                        <h2 className="text-2xl font-semibold text-blue-400 mb-4">📬 Contact</h2>
+                        <p className="text-gray-300 mb-1">Phone: <span className="font-medium">01842281884 / 01319037012 (WhatsApp)</span></p>
+                        <p className="text-gray-300 mb-1">Email:</p>
+                        <p className="text-sm text-gray-400 italic">nayemshahadat581@gmail.com</p>
+                    </div>
 
-                    <div className='w-[98%] text-white md:w-[52%] lg:w-[36%]'>
-                        <h1 className='text-center text-3xl font-medium'>Social Media Link</h1>
-                        <div className='w-[300px] mt-5 mx-auto flex justify-evenly'>
+                    {/* Social Section */}
+                    <div className="text-center">
+                        <h2 className="text-2xl font-semibold text-blue-400 mb-4">🔗 Connect With Me</h2>
+                        <div className="flex justify-center gap-8 mt-2">
                             <a
-                                href="https://www.facebook.com/shahadat.hossaen.71?mibextid=ZbWKwL">
-                                <FaFacebook className='co text-5xl'></FaFacebook></a>
-                            <a href="https://www.linkedin.com/in/shahadat-nayem-6458b4238">
-                                <FaLinkedin className='co text-5xl'></FaLinkedin></a>
-                        </div>
-                        <h1 className='text-3xl mt-5 text-center'>Contact</h1>
-                        <div className='w-[310px] mx-auto'>
-                            <h1 className='mt-2 text-[17px] font-medium text-center'>
-                                01842281884 or 01319037012(WhatAapp)</h1>
-                            <h1 className='mt-2 text-[17px] font-medium text-center'>
-                                Email:nayemshahadat581@gmail.com</h1>
+                                href="https://www.facebook.com/shahadat.hossaen.71?mibextid=ZbWKwL"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transform hover:scale-110 transition duration-300 text-blue-500"
+                            >
+                                <FaFacebook className="text-4xl" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/shahadat-nayem-6458b4238"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transform hover:scale-110 transition duration-300 text-blue-300"
+                            >
+                                <FaLinkedin className="text-4xl" />
+                            </a>
                         </div>
                     </div>
+
+                    {/* Developer Info */}
+                    <div className="text-center md:text-right">
+                        <h2 className="text-2xl font-semibold text-blue-400 mb-4">👨‍💻 Developer</h2>
+                        <p className="text-gray-300">Built with 💙 by <span className="font-bold text-white">Shahadat Hossen</span></p>
+                        <p className="text-sm text-gray-500 mt-1">MERN Stack Developer | CSE Student</p>
+                    </div>
                 </div>
-            </div>
+
+                {/* Divider */}
+                <div className="border-t border-gray-700 mt-10"></div>
+
+                {/* Footer Bottom */}
+                <div className="text-center text-gray-500 text-sm mt-6">
+                    © {new Date().getFullYear()} Shahadat Hossen. All Rights Reserved.
+                </div>
+            </footer>
+
+
         </div>
     )
 }
