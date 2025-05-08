@@ -44,13 +44,14 @@ const Background3D = () => {
 
         const particlesMaterial = new THREE.PointsMaterial({
             size: isMobile ? 0.028 : 0.0199,
-            color: 0x646cff,
+            color: new THREE.Color(0xDAA520) ,
             transparent: true,
             opacity: isMobile ? 0.6 : 0.8,
             blending: THREE.AdditiveBlending,
             sizeAttenuation: true,
+            vertexColors: false,
         });
-
+       
         const particlesMesh = new THREE.Points(
             particlesGeometry,
             particlesMaterial
@@ -125,21 +126,21 @@ const Background3D = () => {
 
     return (
         <div
-        ref={containerRef}
-        className="background-3d"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -1,
-          background: "#1a1a1a",
-          pointerEvents: isMobile ? "none" : "auto",
-          touchAction: "none",
-        }}
-      ></div>
-      
+            ref={containerRef}
+            className="background-3d"
+            style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                zIndex: -1,
+                background: "#1a1a1a",
+                pointerEvents: isMobile ? "none" : "auto",
+                touchAction: "none",
+            }}
+        ></div>
+
     );
 };
 

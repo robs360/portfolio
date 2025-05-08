@@ -28,7 +28,7 @@ const Project = () => {
       <img
         src={info.image}
         alt="Project Preview"
-        className="w-full md:w-[400px] rounded-2xl object-cover shadow-xl hover:scale-105 transition-transform duration-300"
+        className="w-full md:w-[400px] rounded-2xl h-[240px] shadow-xl hover:scale-105 transition-transform duration-300"
       />
 
       <div className="flex-1 flex flex-col text-gray-300">
