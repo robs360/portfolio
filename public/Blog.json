@@ -11,7 +11,7 @@
         "id": "2",
         "name": "E-Travel (On Building)",
         "image": "https://i.ibb.co.com/6Jmch326/project3.png",
-        "liveLink": "https://e-ticket-client-robs360-shahadats-projects-55bc8ce7.vercel.app/",
+        "liveLink": "https://e-booking.vercel.app/",
         "frontendrepo": "https://github.com/robs360/E-Travel",
         "backendrepo": "https://github.com/robs360/e-travell-server",
         "description": " It’s a robust Next Js project solve the travel related problem like travel guidance, hotel book andbus ticket. Where i used Redux toolkit, Redux persist and shadcn ui. I tried to do clear code and follow dry principle by creating reusable components."

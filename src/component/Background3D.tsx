@@ -44,7 +44,7 @@ const Background3D = () => {
 
         const particlesMaterial = new THREE.PointsMaterial({
             size: isMobile ? 0.028 : 0.0199,
-            color: new THREE.Color(0xDAA520) ,
+            color: new THREE.Color(0x646cff) ,
             transparent: true,
             opacity: isMobile ? 0.6 : 0.8,
             blending: THREE.AdditiveBlending,
